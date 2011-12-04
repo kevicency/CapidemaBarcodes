@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="codesomnia.CapidemaBarcodes.Views.BarcodePrintTemplate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Properties="clr-namespace:codesomnia.CapidemaBarcodes.Properties" mc:Ignorable="d">
+    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+        <DockPanel LastChildFill="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <TextBlock FontSize="{Binding Path=ProductCodeSize, Source={x:Static Properties:Settings.Default}}" Text="{Binding ProductCode}" HorizontalAlignment="Center"  DockPanel.Dock="Top" Margin="3 0 0 3"/>
+            <Image Source="{Binding Image}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </DockPanel>
+    </Viewbox>
+</UserControl>
